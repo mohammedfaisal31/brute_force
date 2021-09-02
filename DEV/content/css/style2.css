@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Mulish:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.visited {
+    font-size: 20px;
+}
+
+:root {
+    --myfont: 'Mulish', sans-serif;
+    --my-btn-font: 'Montserrat', sans-serif;
+    --lg-lightcolor: linear-gradient(to left, rgba(116, 235, 213, 0.6), rgba(159, 172, 230, 01));
+    --lg-lightcolor2: linear-gradient(to right, rgba(116, 235, 213, 0.6), rgba(159, 172, 230, 01));
+    --lg-color: linear-gradient(to left, #74ebd5, #9face6);
+}
+
+.bground {
+    background-image: var(--lg-lightcolor), url('../images/pills.png');
+    background-size: cover;
+    background-attachment: fixed;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.pres {
+    float: left;
+    margin: 0 4px 18px 14px;
+    height: 289px;
+}
+
+.float {
+    display: flex;
+    text-align: center;
+}
+
+.float span {
+    font-size: 15px;
+}
+
+.float h1,
+h3 {
+    opacity: 0.8;
+}
+
+.child {
+    flex: 1;
+    padding: 50px;
+    background: url(50%-transparent-white.png);
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.recordst {
+    margin: 0 30px 15px 10px;
+    display: inline-block;
+    height: 289px;
+}
+
+.Ptext {
+    margin: -23px 30px auto 14px;
+    height: 350px;
+    background: url(50%-transparent-white.png);
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+}
+
+.Pharma {
+    margin: -5px 30px 15px 14px;
+    padding: 10px;
+    text-align: center;
+    background: url(50%-transparent-white.png);
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.Pharma h2 {
+    margin: 8px;
+}
+.Pharma p{
+    font-size: 17px;
+}
+body {
+    background-image: var(--lg-lightcolor), url('../images/hospital.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: var(--myfont);
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.appc {
+    position: absolute;
+    border: auto;
+    padding: 35px;
+    display: flex;
+    background-color: rgba(172, 218, 214, 0.808);
+    border-right: -10px;
+    top: 13%;
+    left: 38%;
+    transform: translate(-13%, -38%);
+    opacity: 2;
+    z-index: 10;
+}
+
+.slide:nth-child(1) {
+    background-color: white;
+    opacity: 0.8;
+}
+
+.slide:nth-child(2) {
+    background-color: white;
+    opacity: 0.8;
+}
+
+.slide {
+    position: absolute;
+    animation: sliding 2s ease;
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+@keyframes sliding {
+    from {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    to {
+        opacity: 1;
+        transfrom: scale(1);
+    }
+}
+
+.appctext {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 78%;
+    opacity: 0.8;
+    background-color: white;
+    height: 700px;
+    padding-top: 150px;
+    padding-left: 50px;
+    padding-bottom: 50px;
+    padding-right: 50px;
+    border: auto 10px 10px 10px;
+    z-index: 3;
+    font-size: 20px;
+}
+
+.appctext .controls {
+    width: 100%;
+    margin: 42vh 0 auto -55px;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    /* padding: 0 15px; */
+}
+
+.dots {
+    font-size: 30px;
+    opacity: 0.8;
+}
+
+.fa-heartbeat {
+    color: #fff;
+}
+
+.appctext .next,
+.appctext .prev {
+    font-size: 15px;
+    opacity: 0.6;
+    transition: 0.8s;
+}
+
+.appctext .next:hover,
+.appctext .prev:hover {
+    opacity: 1;
+}
+
+.h_text {
+    background: -webkit-linear-gradient(#000099, #00e6ac);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hospital_name {
+    color: #0059b3;
+    font-size: 70px;
+    font-family: 'Odibee Sans';
+    /* background: var(--lg-lightcolor2); */
+    text-align: center;
+    margin: 30px auto;
+}
+
+.container {
+    margin: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    overflow: hidden;
+    width: calc(100vw - 65vw);
+    max-width: 100%;
+}
+
+.header {
+    background: var(--lg-color);
+    padding: 30px 0;
+}
+
+.header h2 {
+    color: #222;
+    font-family: var(--my-btn-font);
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.form {
+    padding: 40px;
+}
+
+.form-control {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.form-control label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.form-control input {
+    width: 100%;
+    border: 2px solid #f0f0f0;
+    border-radius: 5px;
+    display: block;
+    font-family: var(--myfont);
+    font-size: 14px;
+    padding: 12px;
+}
+
+.form-control input:focus {
+    outline: 0;
+    border-color: #777;
+}
+
+.form-control.success input {
+    border-color: #2ecc71;
+}
+
+.form-control.error input {
+    border-color: #e74c3c;
+}
+
+.form-control i {
+    position: absolute;
+    right: 8px;
+    top: 38px;
+    visibility: hidden;
+}
+
+.form-control small {
+    color: #e74c3c;
+    position: absolute;
+    left: 0;
+    visibility: hidden;
+}
+
+.form-control.error small {
+    visibility: visible;
+}
+
+.form-control.success i.fa-check-circle {
+    color: #2ecc71;
+    visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+    border-color: #e74c3c;
+    visibility: visible;
+}
+
+.form .btn {
+    background: var(--lg-color);
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    color: #fff;
+    display: block;
+    font-family: var(--my-btn-font);
+    font-size: 16px;
+    padding: 15px 0;
+    margin-top: 20px;
+    width: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 1s ease;
+}
+
+.form .btn:hover {
+    background: linear-gradient(to right, #74ebd5, #9face6);
+}
+
+@media(max-width:998px) {
+    .container {
+        width: calc(100vw - 35vw);
+        max-width: 100%;
+    }
+}
+
+a:link {
+    color: #002b80;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #002b80;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #e6005c;
+    text-decoration: none;
+}
+
+.doctor-row {
+    width: 90%;
+    margin: 50px auto 50px auto;
+    text-align: left;
+    line-height: 2;
+}
+
+.doc-img {
+    width: 15%;
+    float: left;
+    margin-right: 30px;
+}
+
+.container_2 {
+    margin: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    overflow: hidden;
+    width: calc(100vw - 50vw);
+    max-width: 100%;
+}
+
+.doctors {
+    margin: 5px;
+    position: relative;
+}
+
+
+/* .adnan-row{
+    margin: 0 auto 50px auto;
+    text-align: left;
+    line-height: 2;
+    width: 90%;
+} */
+
+input[type="radio"]:checked+span {
+    font-weight: bold;
+    font-size: 15px;
+    color: red;
+}
+
+.form .btn2 {
+    text-align: center;
+    background: #b3edff;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    color: black;
+    display: block;
+    font-family: var(--my-btn-font);
+    font-size: 16px;
+    padding: 5px 0;
+    margin-top: 10px;
+    width: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 1s ease;
+}
+
+.btn2:hover {
+    background-color: #5c8a8a;
+    cursor: pointer;
+}
+
+.question {
+    text-align: center;
+    font-weight: bold;
+}
+
+.names {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.content {
+    margin-left: 40px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.one {
+    margin-top: -19px;
+}
+
+.slide {
+    position: absolute;
+    width: 90%;
+    margin-right: 20px;
+}
+
+.Ptext h2 {
+    text-align: center;
+    opacity: 0.8;
+}
+
+.Pharma h2 {
+    text-align: center;
+    opacity: 0.8;
+}
+
+.Pharma p {
+    opacity: 0.8;
+}
+
+.ttable {
+    opacity: 0.8;
+    text-align: right;
+    font-size: 18px;
+    margin: 10px 880px 10px 10px;
+}
+
+.Ptext p {
+    padding: 10px;
+    text-align: center;
+    opacity: 0.8;
+    font-size: 18px;
+}
+
+.unique_id{
+    font-size: 75px;   
+    font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 35px;
+}
+
+.rx{
+    text-align: center;
+    font-size: 40px;
+}
+
+input[type="radio"] {
+    margin: 0 0 0 20px;
+}
+
+textarea {
+    font-size: 18px;
+}
+
+.h4{
+    text-align: right;
+    margin : 0 100px 0 0;
+}
+
+.print{
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.plink:hover{
+    color:blue;
+}
+

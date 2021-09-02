@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+
+<body>
+    <div class="hospital_name">
+        <p class="h_text"> Archangel Hospitals <i class="fas fa-heartbeat"></i></i>
+        </p>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h2>PATIENT DATA</h2>
+        </div>
+        <form class="form" id="form" novalidate method="POST" action="/doctor_entry">
+            <div class="form-control">
+                <label>Patient Name</label><br>
+                <input type="text" name="patient_name" id="patient_name" placeholder="Enter your patients name" autocomplete="off">
+            </div>
+            <div class="form-control">
+                <label>Age</label><br>
+                <input type="number" name="age" id="age" placeholder="Enter the age" autocomplete="off">
+            </div>
+            <div class="">
+                <label>SEX</label><br><br>
+                <input type="radio" name="gender" id="male" value="Male">
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="female" value="female">
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id="others" value="others">
+                <label for="female">Others</label><br>
+            </div><br>
+            <div class="form-control">
+                <label>Height</label><br>
+                <input type="number" name="height" id="height" placeholder="Enter the height in cms">
+            </div>
+            <div class="form-control">
+                <label>Weight</label><br>
+                <input type="number" name="weight" id="weight" placeholder="Enter the weight in kgs">
+            </div>
+            <div class="form-control">
+                <label>Blood Pressure</label><br>
+                <input type="text" name="bp" id="bp" placeholder="Enter the blood pressure in mmHg">
+            </div>
+            <div class="form-control">
+                <label>Sugar Level</label><br>
+                <input type="number" name="sugar_level" id="sugar_level" placeholder="Enter the sugar level in mg/dL">
+            </div>
+            <div class="form-control">
+                <label>Pulse Rate</label><br>
+                <input type="number" name="pulse_rate" id="pulse_rate" placeholder="Enter the pulse rate in bpm">
+            </div>
+            <div class="form-control">
+                <label>SpO<sub>2</sub> Level</label><br>
+                <input type="number" name="spo2" id="spo2" placeholder="Enter the SpO2 level">
+            </div>
+            <div>
+                <label for="prescription">Prescription:</label><br>
+
+                <textarea id="prescription" name="prescription" rows="4" cols="57">
+                </textarea>
+            </div><br>
+            <div class="form-control">
+                <label>Medicine 1</label><br>
+                <input type="text" name="medicine_1" id="medicine_1" placeholder="Enter medication 1" autocomplete="off">
+            </div>
+            <div class="">
+                <input type="radio" name="time1" id="Morning" value="Morning">
+                <label for="Morning">Morning</label>
+                <input type="radio" name="time1" id="noon" value="noon">
+                <label for="noon">noon</label>
+                <input type="radio" name="time1" id="Night" value="Night">
+                <label for="night">Night</label><br>
+            </div><br>
+            <div class="form-control">
+                <label>Medicine 2</label><br>
+                <input type="text" name="medicine_2" id="medicine_2" placeholder="Enter medication 2" autocomplete="off">
+            </div>
+            <div class="">
+                <input type="radio" name="time2" id="Morning" value="Morning">
+                <label for="Morning">Morning</label>
+                <input type="radio" name="time2" id="noon" value="noon">
+                <label for="noon">noon</label>
+                <input type="radio" name="time2" id="Night" value="Night">
+                <label for="night">Night</label><br>
+            </div><br>
+            <div class="form-control">
+                <label>Medicine 3</label><br>
+                <input type="text" name="medicine_3" id="medicine_3" placeholder="Enter medication 3" autocomplete="off">
+            </div>
+            <div class="">
+                <input type="radio" name="time3" id="Morning" value="Morning">
+                <label for="Morning">Morning</label>
+                <input type="radio" name="time3" id="noon" value="noon">
+                <label for="noon">noon</label>
+                <input type="radio" name="time3" id="Night" value="Night">
+                <label for="night">Night</label><br>
+            </div><br>
+            <div class="form-control">
+                <label>Medicine 4</label><br>
+                <input type="text" name="medicine_4" id="medicine_4" placeholder="Enter medication 4" autocomplete="off">
+            </div>
+            <div class="">
+                <input type="radio" name="time4" id="Morning" value="Morning">
+                <label for="Morning">Morning</label>
+                <input type="radio" name="time4" id="noon" value="noon">
+                <label for="noon">noon</label>
+                <input type="radio" name="time4" id="Night" value="Night">
+                <label for="night">Night</label><br>
+            </div><br><br>
+            <div class="form-control">
+                <label>Consultation and medicine fee</label><br>
+                <input type="text" name="fee" id="fee" placeholder="Enter the fee" autocomplete="off">
+            </div>
+            <input type="submit" value="SUBMIT" class="btn" name="" onclick='swal("Patient data", "Recorded successfully", "success").then(function() {
+                window.location = "/";
+            })'>
+
+
+            <br><br>
+
+        </form>
+    </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+
+</html>

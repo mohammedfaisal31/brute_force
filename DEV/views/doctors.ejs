@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class = hospital_name>
+        <p class="h_text">  Archangel Hospitals   <i class="fas fa-heartbeat"></i></i></p>
+    </div>
+    
+
+    <div class="container_2">
+        <div class="header">
+            <h2> <strong>DOCTORS</strong> </h2>
+        </div>
+        <form class="form" id="form" action="/doctors" method="POST">
+            <div class="doctors">
+                
+                <h3 class="question">PLEASE SELECT THE DOCTOR</h3><br>
+                <input type="radio" class="btn-check" name="1" id="dr.adnan"  autocomplete="off"  onclick ="unCheckRest(this.id)">
+                <label class="btn2 btn-outline-success" for="dr.adnan"><div class="doctor-row">
+                <img class="doc-img" src="images/dr_adnan.png" alt="Dr.Adnan">
+                <h2 class="names"><%= doctors[0].doctor_name%></h2>
+                <h4><%= doctors[0].speciality%></h4>
+                <p><%= doctors[0].qualification%></p>
+                </div></label>
+                <input type="radio" class="btn-check" name="2" id="dr.janya" autocomplete="off"  onclick ="unCheckRest(this.id)">
+                <label class="btn2 btn-outline-success" for="dr.janya"><div class="doctor-row">
+                <img class="doc-img" src="images/dr_janya.png" alt="Dr.Janya">
+                <h2 class="names"><%= doctors[1].doctor_name%></h2>
+                <h4><%= doctors[1].speciality%></h4>
+                <p><%= doctors[1].qualification%></p>
+                </div></label>
+                <input type="radio" class="btn-check" name="3" id="dr.faisal" autocomplete="off"  onclick ="unCheckRest(this.id)">
+                <label class="btn2 btn-outline-success" for="dr.faisal"><div class="doctor-row">
+                <img class="doc-img" src="images/dr_faisal.png" alt="Dr.Faisal">
+                <h2 class="names"><%= doctors[2].doctor_name%></h2>
+                <h4><%= doctors[2].speciality%></h4>
+                <p><%= doctors[2].qualification%></p>
+                </div></label>
+                <input type="radio" class="btn-check" name="4" id="dr.arham" autocomplete="off"  onclick ="unCheckRest(this.id)">
+                <label class="btn2 btn-outline-success" for="dr.arham"><div class="doctor-row">
+                <img class="doc-img" src="images/dr_arham.png" alt="Dr.Arham">
+                <h2 class="names"><%= doctors[3].doctor_name%></h2>
+                <h4><%= doctors[3].speciality%></h4>
+                <p><%= doctors[3].qualification%></p>
+                </div></label>
+                <br><br>
+        
+                <h2 class="question">PLEASE SELECT THE DAY OF VISIT</h2><br>
+                <input type="radio" class="btn-check" name="Monday" id="monday" autocomplete="off" onclick ="unCheckRest(this.id)">
+                <label class="btn2 btn-outline-success" for="monday">MONDAY</label>
+                <input type="radio" class="btn-check" name="Tuesday" id="tuesday" autocomplete="off" onclick ="unCheckRest(this.id)">
+                <label class="btn2 btn-outline-success" for="tuesday">TUESDAY</label>
+                <input type="radio" class="btn-check" name="Wednesday" id="wednesday" autocomplete="off" onclick ="unCheckRest(this.id)">
+                <label class="btn2 btn-outline-success" for="wednesday">WEDNESDAY</label>
+                <input type="radio" class="btn-check" name="Thursday" id="thursday" autocomplete="off" onclick ="unCheckRest(this.id)">
+                <label class="btn2 btn-outline-success" for="thursday">THURSDAY</label>
+                <input type="radio" class="btn-check" name="friday" id="friday" autocomplete="off" onclick ="unCheckRest(this.id)">
+                <label class="btn2 btn-outline-success" for="friday">FRIDAY</label>
+                <input type="radio" class="btn-check" name="Saturday" id="saturday" autocomplete="off" onclick ="unCheckRest(this.id)">
+                <label class="btn2 btn-outline-success" for="saturday">SATURDAY</label>
+
+                <br><br>
+
+                
+                
+
+
+                <input type="submit" value="Submit" class="btn" name="">
+        
+                
+            </div>
+                
+
+            
+
+            
+            
+        </form>
+        
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>

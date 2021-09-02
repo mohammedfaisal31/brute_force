@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRESCRIPTION</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style2.css">
+   
+</head>
+
+<body class="bground">
+    <div class="hospital_name">
+        <p class="h_text"> Archangel Hospitals <i class="fas fa-heartbeat"></i></i>
+        </p>
+    </div>
+    <br>
+    <div class="float">
+        <div class="pres child">
+            <h1>DETAILS</h1>
+            <br>
+            <h3>NAME : <span><%= result['patient_name']%></span></h3>
+            <h3>AGE : <span><%= result['age'] %></span> </h3>
+            <h3>SEX : <span><%= result['sex'] %></span></h3>
+            <h3>DOCTOR NAME : <span><%= prescription['doctor_name'] %></span></h3>
+            <h3>DAY OF VISIT : <span><%= prescription['day'] %></span></h3>
+        </div>
+        <div class="recordst child">
+            <h1>PATIENT RECORD</h1>
+            <br>
+            <h3>HEIGHT : <span><%= result['height'] %></span></h3>
+            <h3>WEIGHT : <span><%= result['weight'] %> KG</span></h3>
+            <h3>BLOOD PRESSURE : <span><%= result['bp'] %> mmHg</span></h3>
+            <h3>PULSE RATE : <span><%= result['pulse'] %> bpm</span></h3>
+            <h3>SPO2 LEVELS : <span><%= result['spo2'] %> mmHg</span></h3>
+        </div>
+    </div>
+    <br>
+    <div class="Ptext">
+        <h2>PRESCRIPTION</h2>
+        <div class= "rx">
+        <h3> &#8478 </h3>
+        </div>
+        <p>
+            <%= result['details']%>
+        </p>
+        <br>
+        <h2>You have been prescribed to take the following medications : </h2><br>
+        <div class="ttable">
+            <h4> <%= result['medicine1'] %>:&emsp;<%= result['time1'] %><br>
+                        <%= result['medicine2'] %>:&emsp;<%= result['time2'] %><br>
+                        <%= result['medicine3'] %>:&emsp; <%= result['time3'] %><br>
+                        <%= result['medicine4'] %>:&emsp;<%= result['time4'] %><br>
+        </div>
+    </div>
+    <br>
+    <div class="Pharma">
+        <h2>PHARMACY</h2>
+        <p>You can collect these medications from the pharmacy by providing your unique ID: <b><%= prescription['unique_id'] %></b></p> <br>
+        <p>Total estimated cost : <b>&#8377<span><%= result['fee'] %></span><b> </p><br>
+    </div>
+    <p class="print"><a onclick="window.print()" class="plink alias" style="text-decoration: underline;">PRINT</a>&emsp;&emsp;
+    <a onclick="window.location.href='/'" class="plink" style="text-decoration: underline;">DONE</a></p><br>
+    
+</div>
+</body>
+
+</html>

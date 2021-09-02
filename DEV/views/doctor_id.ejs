@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="hospital_name">
+        <p class="h_text"> Archangel Hospitals <i class="fas fa-heartbeat"></i></i>
+        </p>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h2>E-PRESCRIPTION ENTRY</h2>
+        </div>
+        <form class="form" id="form" method="POST" action="/doctor_id">
+            <% if(error != ""){%>
+                <div class="alert">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                    <p><%= error%></p> 
+                  </div>
+                  <% } %><br>
+            <div class="form-control">
+                <label>Patient unique ID</label>
+                <input type="number" id="registration_id"  name="punique_id" placeholder="Enter the patient's unique ID" autocomplete="off">
+            </div>
+            <input type="submit" value="SUBMIT" class="btn" name="">
+            <br><br>
+        </form>
+
+    </div>
+</body>
+
+
+</html>

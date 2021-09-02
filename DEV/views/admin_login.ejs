@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOCTOR login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="hospital_name">
+        <p class="h_text"> Archangel Hospitals <i class="fas fa-heartbeat"></i></i>
+        </p>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h2>DOCTOR LOGIN</h2>
+        </div>
+        <form class="form" id="form" method="POST" action="/admin_login">
+            <% if(error != ""){%>
+                <div class="alert">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                    <p><%= error%></p> 
+                  </div>
+                  <% } %><br>
+            <div class="form-control">
+                <label>Doctor ID</label>
+                <input type="number" name="doc_id" id="doctor_id" placeholder="Enter your ID" autocomplete="off">
+            </div>
+            <div class="form-control">
+                <label>Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter your password" autocomplete="off">
+            </div>
+            <input type="submit" value="Login" class="btn" name="">
+            <br><br>
+        </form>
+
+    </div>
+</body>
+
+
+</html>

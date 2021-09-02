@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slot</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+
+<body>
+    <div class="center">
+        <div class="appc">
+            <h2> APPOINTMENT CONFIRMATION</h2>
+        </div>
+        <div class="appctext">
+            <!--appctext=slides-->
+            <div class="slide active ">
+                <div class="content one"><br><br><br>
+                    <p>Dear <em><small><span><b><%=slot['patient_name'] %></b>,</span></small></em> </p>
+                    <p>Your appointment has been successfully booked on the upcoming
+                        <small><em><span><b><%=slot['day'] %></b></span></em></small> at <small><em><span><b><%=slot['time'] %></b></span></em></small> </p>
+                    
+                    <p>With <em><small><span><b><%=slot['doctor_name'] %></b></span></small></em></p><br><br>
+                    <p> Swipe right or left for your unique ID </p>
+                    <p class="dots">...........................</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="content two">
+                    <p>Your unique ID for the appointment is <small><b><span>
+                        <div class="unique_id">
+                            <%=slot['unique_id'] %></span></b></small></p>
+                        </div>
+                    <br>
+                    <p>Use this ID for further procedures</p>
+                    <button type="button" class="btn btn-primary" onclick="window.location.href='/'">Done</button>
+            </div>
+            </div>
+            <div class="controls">
+                <div class="prev">
+                    <i class="fa fa-arrow-left"></i>
+                </div>
+                <div class="next">
+                    <i class="fa fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
